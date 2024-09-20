@@ -10,28 +10,28 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.backpushup.backpushupapp.application.DireccionpersonaService;
-import com.backpushup.backpushupapp.domain.DireccionPersona;
+import com.backpushup.backpushupapp.domain.Direccionpersona;
 
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/DireccionPersona")
-public class DireccionPersonaController {
+public class DireccionpersonaController {
 
     private final DireccionpersonaService DireccionpersonaService;
 
-    public DireccionPersonaController(DireccionpersonaService DireccionpersonaService) {
+    public DireccionpersonaController(DireccionpersonaService DireccionpersonaService) {
         this.DireccionpersonaService = DireccionpersonaService;
     }
 
     @GetMapping
-    public List<DireccionPersona> getAllDireccionPersonas() {
+    public List<Direccionpersona> getAllDireccionPersonas() {
         return DireccionpersonaService.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DireccionPersona> getDireccionPersonaById(@PathVariable Long id) {
-        Optional<DireccionPersona> foundDireccionPersona = DireccionpersonaService.findById(id);
+    public ResponseEntity<Direccionpersona> getDireccionPersonaById(@PathVariable Long id) {
+        Optional<Direccionpersona> foundDireccionPersona = DireccionpersonaService.findById(id);
         if (!foundDireccionPersona.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -39,14 +39,14 @@ public class DireccionPersonaController {
     }
 
     @PostMapping
-    public ResponseEntity<DireccionPersona> createDireccionPersona(@Valid @RequestBody DireccionPersona DireccionPersona) {
+    public ResponseEntity<Direccionpersona> createDireccionPersona(@Valid @RequestBody Direccionpersona DireccionPersona) {
         DireccionpersonaService.save(DireccionPersona);
         return new ResponseEntity<>(DireccionPersona, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Map<String, String>> updateDireccionPersona(@PathVariable Long id, @Valid @RequestBody DireccionPersona DireccionPersona) {
-        Optional<DireccionPersona> existingDireccionPersona = DireccionpersonaService.findById(id);
+    public ResponseEntity<Map<String, String>> updateDireccionPersona(@PathVariable Long id, @Valid @RequestBody Direccionpersona DireccionPersona) {
+        Optional<Direccionpersona> existingDireccionPersona = DireccionpersonaService.findById(id);
         if (!existingDireccionPersona.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -59,7 +59,7 @@ public class DireccionPersonaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteDireccionPersona(@PathVariable Long id) {
-        Optional<DireccionPersona> foundDireccionPersona = DireccionpersonaService.findById(id);
+        Optional<Direccionpersona> foundDireccionPersona = DireccionpersonaService.findById(id);
         if (!foundDireccionPersona.isPresent()){
             return new ResponseEntity<>("DireccionPersona no encontrado", HttpStatus.NOT_FOUND);
         }

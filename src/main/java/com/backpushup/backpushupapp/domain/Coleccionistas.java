@@ -16,10 +16,11 @@ import lombok.Data;
 public class Coleccionistas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_coleccionista;
+    private Long id;
 
     @ManyToOne
     @Valid
     @JoinColumn(name = "id_persona")
     private Persona persona;
+
 }

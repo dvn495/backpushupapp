@@ -13,7 +13,7 @@ import lombok.Data;
 public class Epocaantiguedad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_epocaantiguedad;
+    private Long id;
 
     private String nombre;
 }

@@ -16,7 +16,7 @@ import lombok.Data;
 public class Transaccionmediopago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_transaccionmediopago;
+    private Long id;
 
     @ManyToOne
     @Valid

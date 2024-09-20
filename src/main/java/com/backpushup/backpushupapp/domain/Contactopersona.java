@@ -16,7 +16,7 @@ import lombok.Data;
 public class Contactopersona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_contactopersona;
+    private Long id;
 
     @ManyToOne
     @Valid

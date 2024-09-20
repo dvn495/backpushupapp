@@ -16,7 +16,7 @@ import lombok.Data;
 public class Regiones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_region;
+    private Long id;
 
     private String nombre;
 

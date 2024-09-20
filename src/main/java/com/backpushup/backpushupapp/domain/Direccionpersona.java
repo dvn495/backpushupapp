@@ -16,7 +16,7 @@ import lombok.Data;
 public class Direccionpersona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_direccionpersona;
+    private Long id;
 
     private String direccion;
 

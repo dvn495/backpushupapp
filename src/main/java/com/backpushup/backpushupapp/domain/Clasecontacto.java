@@ -13,7 +13,7 @@ import lombok.Data;
 public class Clasecontacto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_clase_contacto;
+    private Long id;
 
     private String tipo;
 }

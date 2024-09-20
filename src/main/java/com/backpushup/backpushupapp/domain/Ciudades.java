@@ -16,7 +16,7 @@ import lombok.Data;
 public class Ciudades {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_ciudad;
+    private Long id;
 
     private String nombre;
 

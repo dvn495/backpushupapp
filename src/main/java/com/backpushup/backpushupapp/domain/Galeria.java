@@ -13,7 +13,7 @@ import lombok.Data;
 public class Galeria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_galeria;
+    private Long id;
 
     private String url;
 }

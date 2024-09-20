@@ -16,7 +16,7 @@ import lombok.Data;
 public class Empleados {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_empleado;
+    private Long id;
 
     private String puesto;
     private Double salario;

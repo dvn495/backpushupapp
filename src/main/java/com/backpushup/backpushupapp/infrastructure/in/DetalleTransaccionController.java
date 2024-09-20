@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.backpushup.backpushupapp.application.Detalle_transaccionService;
+import com.backpushup.backpushupapp.application.DetalleTransaccionService;
 import com.backpushup.backpushupapp.domain.DetalleTransaccion;
 
 import jakarta.validation.Valid;
@@ -18,9 +18,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/DetalleTransaccion")
 public class DetalleTransaccionController {
 
-    private final Detalle_transaccionService Detalle_transaccionService;
+    private final DetalleTransaccionService Detalle_transaccionService;
 
-    public DetalleTransaccionController(Detalle_transaccionService Detalle_transaccionService) {
+    public DetalleTransaccionController(DetalleTransaccionService Detalle_transaccionService) {
         this.Detalle_transaccionService = Detalle_transaccionService;
     }
 

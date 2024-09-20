@@ -13,7 +13,7 @@ import lombok.Data;
 public class Mediopago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_mediopago;
+    private Long id;
 
     private String nombre;
 }

@@ -13,7 +13,7 @@ import lombok.Data;
 public class Estadopersona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_estado_persona;
+    private Long id;
 
     private String estado;
 }

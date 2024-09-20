@@ -45,13 +45,13 @@ public class ColeccionistasController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Map<String, String>> updateColeccionistas(@PathVariable Long id, @Valid @RequestBody Coleccionistas Coleccionistas) {
+    public ResponseEntity<Map<String, String>> updateColeccionistas(@PathVariable Long id, @Valid @RequestBody Coleccionistas coleccionistas) {
         Optional<Coleccionistas> existingColeccionistas = ColeccionistasService.findById(id);
         if (!existingColeccionistas.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        Coleccionistas.setId(id);
-        ColeccionistasService.save(Coleccionistas);
+        coleccionistas.setId(id);
+        ColeccionistasService.save(coleccionistas);
         Map<String, String> response = new HashMap<>();
         response.put("message", "Coleccionistas actualizado correctamente");
         return new ResponseEntity<>(response, HttpStatus.OK);

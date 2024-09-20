@@ -13,7 +13,7 @@ import lombok.Data;
 public class Paises {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_pais;
+    private Long id;
 
     private String nombre;
 }

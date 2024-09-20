@@ -17,7 +17,7 @@ import lombok.Data;
 public class Historialpropiedad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_historial;
+    private Long id;
 
     private Date fecha;
 

@@ -13,7 +13,7 @@ import lombok.Data;
 public class Categorias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_categoria;
+    private Long id;
 
     private String nombre;
 }

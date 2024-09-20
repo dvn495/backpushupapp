@@ -17,7 +17,7 @@ import lombok.Data;
 public class Despachos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_despacho;
+    private Long id;
 
     private Date fecha_despacho;
     private String direccion;

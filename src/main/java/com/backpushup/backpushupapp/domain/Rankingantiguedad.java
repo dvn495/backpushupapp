@@ -13,7 +13,7 @@ import lombok.Data;
 public class Rankingantiguedad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_rankingantiguedad;
+    private Long id;
 
     private String nombre;
 
