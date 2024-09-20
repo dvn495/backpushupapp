@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
 import com.backpushup.backpushupapp.domain.Epocaantiguedad;
 import com.backpushup.backpushupapp.infrastructure.out.EpocaantiguedadRepository;
 
@@ -14,21 +13,21 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class EpocaantiguedadService {
 
-    private final EpocaantiguedadRepository epocaAntiguedadRepository;
+    private final EpocaantiguedadRepository epocaantiguedadRepository;
 
-    public List<Epocaantiguedad> findAll(){
-        return epocaAntiguedadRepository.findAll();
+    public List<Epocaantiguedad> findAll() {
+        return epocaantiguedadRepository.findAll();
     }
 
-    public Optional<Epocaantiguedad> findById(Long id){
-        return epocaAntiguedadRepository.findById(id);
+    public Optional<Epocaantiguedad> findById(Long id) {
+        return epocaantiguedadRepository.findById(id);
     }
 
-    public Epocaantiguedad save(Epocaantiguedad epocaAntiguedad){
-        return epocaAntiguedadRepository.save(epocaAntiguedad);
+    public Epocaantiguedad save(Epocaantiguedad entity) {
+        return epocaantiguedadRepository.save(entity);
     }
 
-    public void deleteById(Long id){
-        epocaAntiguedadRepository.deleteById(id);
+    public void deleteById(Long id) {
+        epocaantiguedadRepository.deleteById(id);
     }
 }

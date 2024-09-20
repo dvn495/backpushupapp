@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
 import com.backpushup.backpushupapp.domain.Categorias;
 import com.backpushup.backpushupapp.infrastructure.out.CategoriasRepository;
 
@@ -16,19 +15,19 @@ public class CategoriasService {
 
     private final CategoriasRepository categoriasRepository;
 
-    public List<Categorias> findAll(){
+    public List<Categorias> findAll() {
         return categoriasRepository.findAll();
     }
 
-    public Optional<Categorias> findById(Long id){
+    public Optional<Categorias> findById(Long id) {
         return categoriasRepository.findById(id);
     }
 
-    public Categorias save(Categorias categorias){
-        return categoriasRepository.save(categorias);
+    public Categorias save(Categorias entity) {
+        return categoriasRepository.save(entity);
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         categoriasRepository.deleteById(id);
     }
 }

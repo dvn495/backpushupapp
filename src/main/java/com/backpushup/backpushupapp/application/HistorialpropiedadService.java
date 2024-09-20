@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
 import com.backpushup.backpushupapp.domain.Historialpropiedad;
 import com.backpushup.backpushupapp.infrastructure.out.HistorialpropiedadRepository;
 
@@ -16,19 +15,19 @@ public class HistorialpropiedadService {
 
     private final HistorialpropiedadRepository historialpropiedadRepository;
 
-    public List<Historialpropiedad> findAll(){
+    public List<Historialpropiedad> findAll() {
         return historialpropiedadRepository.findAll();
     }
 
-    public Optional<Historialpropiedad> findById(Long id){
+    public Optional<Historialpropiedad> findById(Long id) {
         return historialpropiedadRepository.findById(id);
     }
 
-    public Historialpropiedad save(Historialpropiedad historialpropiedad){
-        return historialpropiedadRepository.save(historialpropiedad);
+    public Historialpropiedad save(Historialpropiedad entity) {
+        return historialpropiedadRepository.save(entity);
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         historialpropiedadRepository.deleteById(id);
     }
 }

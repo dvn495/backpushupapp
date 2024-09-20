@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
 import com.backpushup.backpushupapp.domain.Ciudades;
 import com.backpushup.backpushupapp.infrastructure.out.CiudadesRepository;
 
@@ -16,19 +15,19 @@ public class CiudadesService {
 
     private final CiudadesRepository ciudadesRepository;
 
-    public List<Ciudades> findAll(){
+    public List<Ciudades> findAll() {
         return ciudadesRepository.findAll();
     }
 
-    public Optional<Ciudades> findById(Long id){
+    public Optional<Ciudades> findById(Long id) {
         return ciudadesRepository.findById(id);
     }
 
-    public Ciudades save(Ciudades ciudades){
-        return ciudadesRepository.save(ciudades);
+    public Ciudades save(Ciudades entity) {
+        return ciudadesRepository.save(entity);
     }
 
-    public void deleteById(Long id){
+    public void deleteById(Long id) {
         ciudadesRepository.deleteById(id);
     }
 }

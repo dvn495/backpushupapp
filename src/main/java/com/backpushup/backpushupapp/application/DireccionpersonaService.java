@@ -4,31 +4,30 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
-import com.backpushup.backpushupapp.domain.Direccionpersona;
+import com.backpushup.backpushupapp.domain.DireccionPersona;
 import com.backpushup.backpushupapp.infrastructure.out.DireccionpersonaRepository;
 
 import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor
-public class DireccionpersonaService {
+public class DireccionPersonaService {
 
-    private final DireccionpersonaRepository direccionPersonaRepository;
+    private final DireccionpersonaRepository direccionpersonaRepository;
 
-    public List<Direccionpersona> findAll(){
-        return direccionPersonaRepository.findAll();
+    public List<DireccionPersona> findAll() {
+        return direccionpersonaRepository.findAll();
     }
 
-    public Optional<Direccionpersona> findById(Long id){
-        return direccionPersonaRepository.findById(id);
+    public Optional<DireccionPersona> findById(Long id) {
+        return direccionpersonaRepository.findById(id);
     }
 
-    public Direccionpersona save(Direccionpersona direccionPersona){
-        return direccionPersonaRepository.save(direccionPersona);
+    public DireccionPersona save(DireccionPersona entity) {
+        return direccionpersonaRepository.save(entity);
     }
 
-    public void deleteById(Long id){
-        direccionPersonaRepository.deleteById(id);
+    public void deleteById(Long id) {
+        direccionpersonaRepository.deleteById(id);
     }
 }
