@@ -35,8 +35,7 @@ INSERT INTO persona (nombre, id_genero, id_estado_persona) VALUES ('Juan Pérez'
 INSERT INTO sucursal (nombre, id_empresa, id_persona, id_ciudad) VALUES ('Sucursal A', 1, 1, 1), ('Sucursal B', 2, 2, 2);
 
 -- Insertar datos en la tabla antiguedades
-INSERT INTO antiguedades (nombre, id_categoria, id_sucursal, id_rankingantiguedad, id_galeria, id_epocaantiguedad) 
-VALUES ('Mesa Renacentista', 1, 1, 1, 1, 1), ('Reloj Barroco', 2, 2, 2, 2, 2);
+INSERT INTO antiguedades (nombre, id_categoria, id_sucursal, id_rankingantiguedad, id_galeria, id_epocaantiguedad) VALUES ('Mesa Renacentista', 1, 1, 1, 1, 1), ('Reloj Barroco', 2, 2, 2, 2, 2);
 
 -- Insertar datos en la tabla clasecontacto
 INSERT INTO clasecontacto (tipo) VALUES ('Teléfono'), ('Correo Electrónico');
@@ -81,16 +80,13 @@ INSERT INTO movcaja (id_tipomovcaja) VALUES (1), (2);
 INSERT INTO estacionpago (id_movcaja) VALUES (1), (2);
 
 -- Insertar datos en la tabla transacciones
-INSERT INTO transacciones (id_persona, id_tipotransaccion, id_transaccionmediopago, id_estacionpago) 
-VALUES (1, 1, 1, 1), (2, 2, 2, 2);
+INSERT INTO transacciones (id_persona, id_tipotransaccion, id_transaccionmediopago, id_estacionpago) VALUES (1, 1, 1, 1), (2, 2, 2, 2);
 
 -- Insertar datos en la tabla empleados
 INSERT INTO empleados (id_persona, puesto, salario) VALUES (1, 'Gerente', 5000.00), (2, 'Asistente', 3000.00);
 
 -- Insertar datos en la tabla detalle_transaccion
-INSERT INTO detalle_transaccion (id_antiguedad, id_transaccion, cantidad, precio) 
-VALUES (1, 1, 2, 1500.00), (2, 2, 1, 2500.00);
+INSERT INTO detalle_transaccion (id_antiguedad, id_transaccion, cantidad, precio)  VALUES (1, 1, 2, 1500.00), (2, 2, 1, 2500.00);
 
 -- Insertar datos en la tabla despachos
-INSERT INTO despachos (id_transaccion, fecha_despacho, direccion) 
-VALUES (1, '2023-01-02', 'Calle A 123'), (2, '2023-02-02', 'Avenida B 456');
+INSERT INTO despachos (id_transaccion, fecha_despacho, direccion) VALUES (1, '2023-01-02', 'Calle A 123'), (2, '2023-02-02', 'Avenida B 456');
